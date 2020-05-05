@@ -1,4 +1,6 @@
 # PCA-in-spectroscopy
+Visualization tool for spectroscopy.
+
 This code is written in R.
 
 It is an example of the visualization presented in the work Robledo and Cuestas (2020) (Ref). 
