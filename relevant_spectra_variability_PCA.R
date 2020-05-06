@@ -6,9 +6,10 @@
 ##################################################################
 
 ##################################################################
-# Code written by J. I. Robledo, commented and revised by Eloisa Cuestas
+# Code written by J. I. Robledo and Eloisa Cuestas
+# Published in --
 # Please cite as
-# doi:
+# doi: --
 ##################################################################
 
 ##################################################################
@@ -28,9 +29,9 @@ library(stats)
 
 # Energy: a .txt file with the names of the calibrated energy channels.
 
-# CPx: number of the PC that are plotted on the X axis.
+# CPx: number of the PC that is plotted on the X axis.
 
-# CPy: number of the PC that is are plotted on the Y axis.
+# CPy: number of the PC that is plotted on the Y axis.
 
 # spectrum_number: number of spectrum to observe.
 
@@ -44,14 +45,12 @@ dataset <- as.matrix(read.table("Mn_Data.txt", header = F, sep = "\t"))
 
 energy <- as.matrix(read.table("Mn_energy_channels.txt", header = F, sep = "\t"))
 
-# transpose the data
+# Transpose the data
 X <- t(dataset)
 
-# define p and n and print them as to verify
+# Define p and n and print them as to verify
 p <- dim(X)[2]
-p
 n <- dim(X)[1]
-n
 
 CPx <-  1
 
@@ -136,7 +135,6 @@ dim(mydata[[1]])
 ##################################################################
 
 # Retrieving the relevant variability as to reconstruct the data (filtering)
-
 n1=dim(mydata[[1]])[1]
 n2=dim(mydata[[1]])[2]
 
@@ -149,11 +147,11 @@ for (i in 1:n){
                sum[i,] <- sum[i,] + means
               }
 
-# exporting the data of the previous plot
+# Exporting the data of the previous plot
 write.table(t(rbind(energy[,1],sum)), file = 'contribution_firstnPC_RRS.dat', col.names = FALSE, row.names = FALSE )
 write.table(t(rbind(energy[,1],X)), file = 'spectra_RRS.dat', col.names = FALSE, row.names = FALSE)
 
-# plotting the obtained single contributions
+# Plotting the obtained single contributions
 for (j in which_contribution_PC_min:which_contribution_PC_max){
   if (j == which_contribution_PC_min){plot(energy[,1], X[spectrum_number,], col = 1, type = "o",
                         main = 'Individual contribution of the selected PC', ylab = 'Intensity (a.u.)', xlab = 'Energy (eV)',
