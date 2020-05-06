@@ -41,9 +41,9 @@ library(stats)
 # when min and max are equal a single contribution os plotted
 
 
-dataset <- as.matrix(read.table("Mn_Data.txt", header = F, sep = "\t"))
+dataset <- as.matrix(read.table("input_files/Mn_Data.txt", header = F, sep = "\t"))
 
-energy <- as.matrix(read.table("Mn_energy_channels.txt", header = F, sep = "\t"))
+energy <- as.matrix(read.table("input_files/Mn_energy_channels.txt", header = F, sep = "\t"))
 
 # Transpose the data
 X <- t(dataset)
@@ -87,7 +87,7 @@ means <- apply(X, 2, mean)
 plot(energy[,1], means, ylab = 'means' , xlab = 'energy')
 
 # Write energy and means as an output
-write.table(t(rbind(energy[,1], means)), file = 'energy_means.dat')
+write.table(t(rbind(energy[,1], means)), file = 'output_files/energy_means.dat')
 
 # Calculate the standard deviation for each column (original rows)
 sd <- apply(X, 2, sd)
@@ -119,7 +119,7 @@ z1 <- as.matrix(z)
 
 dim(z1)
 
-write.table(cbind(as.matrix(z),proj_PCS), file = 'PCA_RRS.dat', row.names = FALSE )
+write.table(cbind(as.matrix(z),proj_PCS), file = 'output_files/PCA_RRS.dat', row.names = FALSE )
 
 ##################################################################
 
@@ -148,8 +148,8 @@ for (i in 1:n){
               }
 
 # Exporting the data of the previous plot
-write.table(t(rbind(energy[,1],sum)), file = 'contribution_firstnPC_RRS.dat', col.names = FALSE, row.names = FALSE )
-write.table(t(rbind(energy[,1],X)), file = 'spectra_RRS.dat', col.names = FALSE, row.names = FALSE)
+write.table(t(rbind(energy[,1],sum)), file = 'output_files/contribution_firstnPC_RRS.dat', col.names = FALSE, row.names = FALSE )
+write.table(t(rbind(energy[,1],X)), file = 'output_files/spectra_RRS.dat', col.names = FALSE, row.names = FALSE)
 
 # Plotting the obtained single contributions
 for (j in which_contribution_PC_min:which_contribution_PC_max){
