@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>PCA in spectroscopy</title>
+  </head>
+  <body>
+    <h2>Visualization tool for spectroscopy</h2>
+    <p>This code is written in R. It is an example of the visualization presented in the
+    work <em>"Selecting and visualizing the spectral variability relevant for sample classification using principal component analysis"</em>
+     by Robledo Cuestas (2020) [1]. All auxilliary files are present in the folder. <br/><br/>
+   To run your own data, clone this repository and change the input data from <em> input_files </em> folder
+   to your own data, keeping the file formats. An example of a manganese dataset is presented. <br/><br/>
+   The <em>output_files</em> folder contains four files. <br/>
+   - <em> PCA_RRS.dat</em>: contains all principal component loadings in columns from the PCA applied to the given data. <br/>
+   - <em> contribution_firstnPC_RRS.dat</em>: contains the contribution of each of the first <em>n</em> principal components selected to the resulting spectrum. <br/>
+   - <em> energy_means.dat</em>: contains the mean value of each energy channel (averaging over all spectra in the dataset). <br/>
+   - <em> spectra_RRS.dat </em>: contains the spectra resulting from the contribution of the first <em>n</em> compononents chosen.</p>
+    <div class="Reference">
+      <h2>References</h2>
+      <p>[1] Robledo, J. I., & Cuestas, E. (2020).
+         <em>"Selecting and visualizing the spectra variability relevant for sample
+          classification using Principal Component Analysis. Journal
+           of Analytical Atomic Spectrometry"</em>, https://doi.org/10.1039/D0JA00148A. </p>
+    </div>
+  </body>
+</html>
