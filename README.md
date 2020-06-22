@@ -1,5 +1,5 @@
-# PCA-in-spectroscopy
-Visualization tool for spectroscopy.
+# PCA in spectroscopy
+### Visualization tool for spectroscopy.
 
 This code is written in R.
 
