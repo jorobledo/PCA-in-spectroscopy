@@ -1,6 +1,9 @@
 # PCA in spectroscopy
 ### Visualization tool for spectroscopy.
 
+[![publication](https://img.shields.io/badge/Publication-link-brightgreen)](https://doi.org/10.1039/D0JA00148A)
+[![Web version](https://img.shields.io/badge/Web%20version-link-informational)](https://jorobledo.github.io/PCA-in-spectroscopy/)
+
 check https://jorobledo.github.io/PCA-in-spectroscopy/
 
 This code is written in R.
